@@ -13,6 +13,8 @@
 		E5677932274132CD0040FEF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5677931274132CD0040FEF0 /* Preview Assets.xcassets */; };
 		E5677934274132CD0040FEF0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5677933274132CD0040FEF0 /* Persistence.swift */; };
 		E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5677935274132CD0040FEF0 /* hourglass.xcdatamodeld */; };
+		E567793E2741436C0040FEF0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567793D2741436B0040FEF0 /* CardView.swift */; };
+		E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567793F274150270040FEF0 /* TaskTypeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		E5677931274132CD0040FEF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5677933274132CD0040FEF0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E5677936274132CD0040FEF0 /* hourglass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hourglass.xcdatamodel; sourceTree = "<group>"; };
+		E567793D2741436B0040FEF0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E567793F274150270040FEF0 /* TaskTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				E5677933274132CD0040FEF0 /* Persistence.swift */,
 				E5677935274132CD0040FEF0 /* hourglass.xcdatamodeld */,
 				E5677930274132CD0040FEF0 /* Preview Content */,
+				E567793D2741436B0040FEF0 /* CardView.swift */,
+				E567793F274150270040FEF0 /* TaskTypeView.swift */,
 			);
 			path = hourglass;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 				E5677934274132CD0040FEF0 /* Persistence.swift in Sources */,
 				E567792D274132C90040FEF0 /* ContentView.swift in Sources */,
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
+				E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */,
 				E567792B274132C90040FEF0 /* hourglassApp.swift in Sources */,
+				E567793E2741436C0040FEF0 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

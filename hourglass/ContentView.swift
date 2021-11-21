@@ -20,13 +20,25 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                    ZStack {
+                        NavigationLink(destination:
+                                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        ) {
+                            EmptyView()
+                        }
+                        .opacity(0.0)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        HStack {
+                            CardView()
+                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.08), radius: 4, x: 0, y: 4)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color("bg_color",bundle: nil))
+            
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -38,7 +50,10 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
+            .listStyle(.plain)
+            .navigationTitle(Text("Hourglass")).navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
+            .background(Color("bg_color",bundle: nil).edgesIgnoringSafeArea(.all))
+            
         }
     }
 
@@ -83,6 +98,9 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        Group {
+            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            ContentView().preferredColorScheme(.dark).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        }
     }
 }
