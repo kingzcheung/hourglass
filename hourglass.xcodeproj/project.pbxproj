@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522BCEB274D1BD000EC2EB3 /* HourglassView.swift */; };
+		E522BCEE274D1E0A00EC2EB3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522BCED274D1E0A00EC2EB3 /* SettingView.swift */; };
 		E567792B274132C90040FEF0 /* hourglassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567792A274132C90040FEF0 /* hourglassApp.swift */; };
 		E567792D274132C90040FEF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567792C274132C90040FEF0 /* ContentView.swift */; };
 		E567792F274132CD0040FEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E567792E274132CD0040FEF0 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E522BCEB274D1BD000EC2EB3 /* HourglassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourglassView.swift; sourceTree = "<group>"; };
+		E522BCED274D1E0A00EC2EB3 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E5677927274132C90040FEF0 /* hourglass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hourglass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E567792A274132C90040FEF0 /* hourglassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourglassApp.swift; sourceTree = "<group>"; };
 		E567792C274132C90040FEF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				E5677930274132CD0040FEF0 /* Preview Content */,
 				E567793D2741436B0040FEF0 /* CardView.swift */,
 				E567793F274150270040FEF0 /* TaskTypeView.swift */,
+				E522BCEB274D1BD000EC2EB3 /* HourglassView.swift */,
+				E522BCED274D1E0A00EC2EB3 /* SettingView.swift */,
 			);
 			path = hourglass;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 				E567792D274132C90040FEF0 /* ContentView.swift in Sources */,
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
 				E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */,
+				E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */,
+				E522BCEE274D1E0A00EC2EB3 /* SettingView.swift in Sources */,
 				E567792B274132C90040FEF0 /* hourglassApp.swift in Sources */,
 				E567793E2741436C0040FEF0 /* CardView.swift in Sources */,
 			);

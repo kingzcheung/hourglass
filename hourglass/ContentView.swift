@@ -9,92 +9,39 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    
+    @State var tabIndex = 1
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    ZStack {
-                        NavigationLink(destination:
-                                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                        ) {
-                            EmptyView()
-                        }
-                        .opacity(0.0)
-                        .buttonStyle(PlainButtonStyle())
-                        
-                        HStack {
-                            CardView()
-                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.08), radius: 4, x: 0, y: 4)
-                        }
-                    }
+        TabView(selection: $tabIndex) {
+            HourglassView().tabItem {
+                
+                if tabIndex == 1 {
+                    Image("HourglassActive")
+                }else {
+                    Image("Hourglass")
                 }
-                .onDelete(perform: deleteItems)
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color("bg_color",bundle: nil))
-            
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                
+            }.tag(1)
+            Text("Tab Content 2").tabItem {
+                if tabIndex == 2 {
+                    Image("CalendarActive")
+                }else {
+                    Image("Calendar")
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                
+            }.tag(2)
+            SettingView().tabItem {
+                if tabIndex == 3 {
+                    Image("SettingActive")
+                }else {
+                    Image("Setting")
                 }
-            }
-            .listStyle(.plain)
-            .navigationTitle(Text("Hourglass")).navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
-            .background(Color("bg_color",bundle: nil).edgesIgnoringSafeArea(.all))
-            
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+            }.tag(3)
+        }.font(.headline)
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

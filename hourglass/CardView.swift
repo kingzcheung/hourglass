@@ -20,10 +20,13 @@ struct CardView: View {
                         .fontWeight(.medium)
                         .font(.subheadline)
                         .foregroundColor(Color("main_title_color"))
+                        .multilineTextAlignment(.leading)
+                        
                     
                     Text("It has four milstone to losing 6 pounds,It has four milstone to losing 6 pounds")
                         .font(.caption)
                         .foregroundColor(Color(hue: 1.0, saturation: 0.009, brightness: 0.845))
+                        .multilineTextAlignment(.leading)
                         .lineLimit(2)
                     
                 }.padding(.vertical, 10)
