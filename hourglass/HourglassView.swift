@@ -31,7 +31,7 @@ struct HourglassView: View {
                         
                         HStack {
                             CardView()
-                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.08), radius: 4, x: 0, y: 4)
+                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 4, x: 0, y: 4)
                         }
                     }
                 }

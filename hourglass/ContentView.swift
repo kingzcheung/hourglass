@@ -23,7 +23,7 @@ struct ContentView: View {
                 }
                 
             }.tag(1)
-            Text("Tab Content 2").tabItem {
+            DateView().tabItem {
                 if tabIndex == 2 {
                     Image("CalendarActive")
                 }else {
