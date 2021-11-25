@@ -12,6 +12,7 @@ struct DayView: View {
     @State var dayIndex: Int
     @State var isCurrent:Bool = false
     
+    private let size = 40.0
     
     var body: some View {
         VStack {
@@ -21,16 +22,20 @@ struct DayView: View {
                 } label: {
                     if isCurrent {
                         Text("\(dayIndex)")
+                            .fontWeight(.bold)
                             .multilineTextAlignment(.center)
-                            .frame(minWidth: 30, idealWidth: 30, maxWidth: 30, minHeight: 30, idealHeight: 30, maxHeight: 30, alignment: .center)
+                            .frame(minWidth: size, idealWidth: size, maxWidth: size, minHeight: size, idealHeight: size, maxHeight: size, alignment: .center)
                             .background(.blue)
                             .foregroundColor(.white)
-                            .cornerRadius(15)
+                            .cornerRadius(size / 2)
+                            .font(.callout)
+                        
                     }else {
                     Text("\(dayIndex)")
                         .multilineTextAlignment(.center)
-                        .frame(minWidth: 30, idealWidth: 30, maxWidth: 30, minHeight: 30, idealHeight: 30, maxHeight: 30, alignment: .center)
+                        .frame(width: size, height: size, alignment: .center)
                         .foregroundColor(.black)
+                        .font(.callout)
                     }
                 }
 
