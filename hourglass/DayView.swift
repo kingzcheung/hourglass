@@ -12,7 +12,7 @@ struct DayView: View {
     @State var dayIndex: Int
     @State var isCurrent:Bool = false
     
-    private let size = 40.0
+    private let size = 36.0
     
     var body: some View {
         VStack {

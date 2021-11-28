@@ -10,8 +10,8 @@ import SwiftUI
 struct DateView: View {
     var body: some View {
         NavigationView {
-            List {
-                CalendarView().listRowSeparator(.hidden)
+            ScrollView {
+                CalendarView().padding(.top).listRowSeparator(.hidden)
             }
             
             .listStyle(.plain)
@@ -27,5 +27,6 @@ struct DateView: View {
 struct DateView_Previews: PreviewProvider {
     static var previews: some View {
         DateView()
+            .previewDevice("iPhone 12 mini")
     }
 }
