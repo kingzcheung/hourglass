@@ -34,7 +34,7 @@ struct DayView: View {
                     Text("\(dayIndex)")
                         .multilineTextAlignment(.center)
                         .frame(width: size, height: size, alignment: .center)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("DayColor"))
                         .font(.callout)
                     }
                 }
@@ -50,7 +50,15 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(dayIndex: 11,isCurrent: true)
-            .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
+        Group {
+            DayView(dayIndex: 11,isCurrent: true)
+                .previewLayout(.fixed(width: 100.0, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
+            DayView(dayIndex: 11,isCurrent: false)
+                .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
+            DayView(dayIndex: 11,isCurrent: false)
+                .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
+                .preferredColorScheme(.dark)
+        }
+        
     }
 }

@@ -20,7 +20,20 @@
 		E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5677935274132CD0040FEF0 /* hourglass.xcdatamodeld */; };
 		E567793E2741436C0040FEF0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567793D2741436B0040FEF0 /* CardView.swift */; };
 		E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E567793F274150270040FEF0 /* TaskTypeView.swift */; };
+		E581E3692755121300021659 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E3682755121300021659 /* Month.swift */; };
+		E581E37127551A1600021659 /* hourglassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E37027551A1600021659 /* hourglassTests.swift */; };
+		E581E37827551A5E00021659 /* MonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E37727551A5E00021659 /* MonthTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E581E37227551A1600021659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E567791F274132C90040FEF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5677926274132C90040FEF0;
+			remoteInfo = hourglass;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E522BCEB274D1BD000EC2EB3 /* HourglassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourglassView.swift; sourceTree = "<group>"; };
@@ -37,10 +50,21 @@
 		E5677936274132CD0040FEF0 /* hourglass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hourglass.xcdatamodel; sourceTree = "<group>"; };
 		E567793D2741436B0040FEF0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E567793F274150270040FEF0 /* TaskTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeView.swift; sourceTree = "<group>"; };
+		E581E3682755121300021659 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		E581E36E27551A1600021659 /* hourglassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hourglassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E581E37027551A1600021659 /* hourglassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourglassTests.swift; sourceTree = "<group>"; };
+		E581E37727551A5E00021659 /* MonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E5677924274132C90040FEF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E581E36B27551A1600021659 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				E5677929274132C90040FEF0 /* hourglass */,
+				E581E36F27551A1600021659 /* hourglassTests */,
 				E5677928274132C90040FEF0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				E5677927274132C90040FEF0 /* hourglass.app */,
+				E581E36E27551A1600021659 /* hourglassTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +95,7 @@
 		E5677929274132C90040FEF0 /* hourglass */ = {
 			isa = PBXGroup;
 			children = (
+				E581E3682755121300021659 /* Month.swift */,
 				E567792A274132C90040FEF0 /* hourglassApp.swift */,
 				E567792C274132C90040FEF0 /* ContentView.swift */,
 				E567792E274132CD0040FEF0 /* Assets.xcassets */,
@@ -94,6 +121,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E581E36F27551A1600021659 /* hourglassTests */ = {
+			isa = PBXGroup;
+			children = (
+				E581E37027551A1600021659 /* hourglassTests.swift */,
+				E581E37727551A5E00021659 /* MonthTests.swift */,
+			);
+			path = hourglassTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +150,24 @@
 			productReference = E5677927274132C90040FEF0 /* hourglass.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E581E36D27551A1600021659 /* hourglassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E581E37427551A1600021659 /* Build configuration list for PBXNativeTarget "hourglassTests" */;
+			buildPhases = (
+				E581E36A27551A1600021659 /* Sources */,
+				E581E36B27551A1600021659 /* Frameworks */,
+				E581E36C27551A1600021659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E581E37327551A1600021659 /* PBXTargetDependency */,
+			);
+			name = hourglassTests;
+			productName = hourglassTests;
+			productReference = E581E36E27551A1600021659 /* hourglassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,6 +180,10 @@
 				TargetAttributes = {
 					E5677926274132C90040FEF0 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					E581E36D27551A1600021659 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E5677926274132C90040FEF0;
 					};
 				};
 			};
@@ -143,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				E5677926274132C90040FEF0 /* hourglass */,
+				E581E36D27551A1600021659 /* hourglassTests */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +213,13 @@
 			files = (
 				E5677932274132CD0040FEF0 /* Preview Assets.xcassets in Resources */,
 				E567792F274132CD0040FEF0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E581E36C27551A1600021659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +237,7 @@
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
 				E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */,
 				E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */,
+				E581E3692755121300021659 /* Month.swift in Sources */,
 				E522BCEE274D1E0A00EC2EB3 /* SettingView.swift in Sources */,
 				E522BCF0274E733400EC2EB3 /* DateView.swift in Sources */,
 				E567792B274132C90040FEF0 /* hourglassApp.swift in Sources */,
@@ -178,7 +245,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E581E36A27551A1600021659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E581E37127551A1600021659 /* hourglassTests.swift in Sources */,
+				E581E37827551A5E00021659 /* MonthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E581E37327551A1600021659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5677926274132C90040FEF0 /* hourglass */;
+			targetProxy = E581E37227551A1600021659 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E5677938274132CD0040FEF0 /* Debug */ = {
@@ -355,6 +439,52 @@
 			};
 			name = Release;
 		};
+		E581E37527551A1600021659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = US33857E6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kingzcheung.hourglassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hourglass.app/hourglass";
+			};
+			name = Debug;
+		};
+		E581E37627551A1600021659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = US33857E6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kingzcheung.hourglassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hourglass.app/hourglass";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,6 +502,15 @@
 			buildConfigurations = (
 				E567793B274132CD0040FEF0 /* Debug */,
 				E567793C274132CD0040FEF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E581E37427551A1600021659 /* Build configuration list for PBXNativeTarget "hourglassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E581E37527551A1600021659 /* Debug */,
+				E581E37627551A1600021659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
