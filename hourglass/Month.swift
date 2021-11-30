@@ -18,9 +18,10 @@ struct Month {
         ]
     }
     
-    static func getCurentMonthDays() -> Int {
-        let calendar = self.dateComponents
-        let range = calendar.range(of: Calendar.Component.day, in: Calendar.Component.month, for: Date())
+    static func getCurentMonthDays(dateComponents dc: DateComponents) -> Int {
+        let calendar = Calendar.current
+        let date = calendar.date(from: dc) ?? Date()
+        let range = calendar.range(of: Calendar.Component.day, in: Calendar.Component.month, for: date)
         return range!.count
     }
 }

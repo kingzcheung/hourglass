@@ -17,30 +17,35 @@ struct HourglassView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
+        
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    ZStack {
-                        NavigationLink(destination:
-                                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                        ) {
-                            EmptyView()
-                        }
-                        .opacity(0.0)
-                        .buttonStyle(PlainButtonStyle())
-                        
-                        HStack {
-                            CardView()
-                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 4, x: 0, y: 4)
+            VStack {
+                List {
+                    ForEach(items) { item in
+                        ZStack {
+                            NavigationLink(destination:
+                                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                            ) {
+                                EmptyView()
+                            }
+                            .opacity(0.0)
+                            .buttonStyle(PlainButtonStyle())
+
+                            HStack {
+                                CardView()
+                                    .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 4, x: 0, y: 4)
+                            }
                         }
                     }
-                }
-                .onDelete(perform: deleteItems)
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color("bg_color",bundle: nil))
+                    .onDelete(perform: deleteItems)
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color("bg_color",bundle: nil))
+            
+            }
             
             }
             .toolbar {
+            
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
@@ -51,10 +56,12 @@ struct HourglassView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle(Text("Hourglass")).navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
             .background(Color("bg_color",bundle: nil).edgesIgnoringSafeArea(.all))
+            // bug??
+            .navigationBarTitle(Text("Hourglass"))
+            .navigationBarTitleDisplayMode(.large)
             
-        }
+         }//.navigationViewStyle(.stack)
     }
 
     private func addItem() {

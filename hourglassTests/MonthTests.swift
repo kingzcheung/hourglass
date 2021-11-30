@@ -36,5 +36,23 @@ class MonthTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testGetCurentMonthDays () throws {
+        
+        var dc = DateComponents.init()
+        dc.year = 2021
+        dc.month = 2
+        dc.day = 1
+        dc.hour = 0
+        dc.minute = 1
+        dc.second = 1
+        
+        print(">>>>>>>>>>>>>>>>>")
+        
+        let count = Month.getCurentMonthDays(dateComponents: dc)
+        print(count)
+        XCTAssertEqual(28, count)
+        
+    }
 
 }
