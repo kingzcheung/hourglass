@@ -24,6 +24,17 @@ struct CalendarView: View {
         }
     }
     
+    var days: [Int]  {
+        
+        let calendar = Calendar.current
+        
+        let dc = calendar.dateComponents([.year,.month,.day], from: Date())
+        
+        var month = Month.init(dateComponents: dc)
+        
+        return month.toDays()
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -67,7 +78,7 @@ struct CalendarView: View {
             }
             
             LazyVGrid(columns: columns,spacing: 5) {
-                ForEach((1...30), id: \.self) { i in
+                ForEach(days, id: \.self) { i in
                     DayView(dayIndex: i,isCurrent: current == i)
                 }
             }

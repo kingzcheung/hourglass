@@ -74,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E55900D72759000A004EC249 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E581E3682755121300021659 /* Month.swift */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		E567791E274132C90040FEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +103,7 @@
 		E5677929274132C90040FEF0 /* hourglass */ = {
 			isa = PBXGroup;
 			children = (
-				E581E3682755121300021659 /* Month.swift */,
+				E55900D72759000A004EC249 /* lib */,
 				E567792A274132C90040FEF0 /* hourglassApp.swift */,
 				E567792C274132C90040FEF0 /* ContentView.swift */,
 				E567792E274132CD0040FEF0 /* Assets.xcassets */,

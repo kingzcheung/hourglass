@@ -25,9 +25,7 @@ class MonthTests: XCTestCase {
         
         var dc = DateComponents.init()
         dc.day = 2
-        
-        let month = Month(dateComponents: dc)
-        print(month.toDays())
+
     }
 
     func testPerformanceExample() throws {
@@ -53,6 +51,19 @@ class MonthTests: XCTestCase {
         print(count)
         XCTAssertEqual(28, count)
         
+    }
+    
+    func testToDays() throws{
+        var dc = DateComponents.init()
+        dc.year = 2021
+        dc.month = 12
+        dc.day = 2
+        dc.hour = 0
+        dc.minute = 1
+        dc.second = 1
+        var month = Month(dateComponents: dc)
+        let exp1 = [0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+        XCTAssertEqual(exp1, month.toDays())
     }
 
 }
