@@ -21,7 +21,7 @@ struct Month {
         // 获取当前月份有多少天
         let monthCount = Month.getCurentMonthDays(dateComponents: self.dateComponents)
         
-        for i in 0..<firstDayIdx {
+        for _ in 0..<firstDayIdx {
             days += [0]
         }
         

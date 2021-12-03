@@ -21,7 +21,7 @@ struct DayView: View {
                     print("\(dayIndex)")
                 } label: {
                     if isCurrent {
-                        Text("\(dayIndex)")
+                        Text(dayIndex == 0 ? " " : "\(dayIndex)")
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
                             .frame(minWidth: size, idealWidth: size, maxWidth: size, minHeight: size, idealHeight: size, maxHeight: size, alignment: .center)
@@ -31,7 +31,7 @@ struct DayView: View {
                             .font(.callout)
                         
                     }else {
-                    Text("\(dayIndex)")
+                    Text(dayIndex == 0 ? " " : "\(dayIndex)")
                         .multilineTextAlignment(.center)
                         .frame(width: size, height: size, alignment: .center)
                         .foregroundColor(Color("DayColor"))
