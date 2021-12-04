@@ -28,9 +28,7 @@ struct Month {
         for i in 1 ..< monthCount {
             days += [i]
         }
-        
-        print(days)
-        
+                
         return days
     }
     

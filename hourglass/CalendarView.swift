@@ -12,16 +12,15 @@ struct CalendarView: View {
 //    var weeks = ["Su","Mo","Tu","We","Th","Fr","Sa"]
     var weeks = ["日","一","二","三","四","五","六"]
     var columns : [GridItem] = Array(repeating: .init(.flexible()), count: 7)
-    var current: Int {
-        get {
-            let dc = Calendar.current.dateComponents(in: TimeZone.current, from: Date())
 
-            return dc.day ?? 1
-        }
-        
-        set {
-            
-        }
+    @State var currentDay: Int
+    
+    
+    
+    init() {
+        let dc = Calendar.current.dateComponents(in: TimeZone.current, from: Date())
+        self.currentDay = dc.day ?? 1
+        //print("?????????init \( dc.day)")
     }
     
     var days: [Int]  {
@@ -41,9 +40,11 @@ struct CalendarView: View {
                 Button {
                     print("年月日")
                 } label: {
-                    Text("2021年11月28日")
+                    Text("2021年11月28日\(currentDay)")
+                        .multilineTextAlignment(.center)
                         .padding(.horizontal)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("DayColor"))
+                        
                 }
 
                 Spacer()
@@ -69,7 +70,7 @@ struct CalendarView: View {
                 ForEach(weeks.indices,id: \.self) { i in
                     Spacer()
                     Text(weeks[i])
-                        .font(.title3)
+                        .font(.callout)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
                     
@@ -78,8 +79,8 @@ struct CalendarView: View {
             }
             
             LazyVGrid(columns: columns,spacing: 5) {
-                ForEach(days, id: \.self) { i in
-                    DayView(dayIndex: i,isCurrent: current == i)
+                ForEach(days.indices, id: \.self) { i in
+                    DayView(dayIndex: days[i],isCurrent: .constant(currentDay == days[i]),currentVal: $currentDay)
                 }
             }
             
