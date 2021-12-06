@@ -23,6 +23,7 @@
 		E581E3692755121300021659 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E3682755121300021659 /* Month.swift */; };
 		E581E37127551A1600021659 /* hourglassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E37027551A1600021659 /* hourglassTests.swift */; };
 		E581E37827551A5E00021659 /* MonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E37727551A5E00021659 /* MonthTests.swift */; };
+		E587EDE1275E465500CA80A1 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE0275E465500CA80A1 /* CalendarVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E581E36E27551A1600021659 /* hourglassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hourglassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E581E37027551A1600021659 /* hourglassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourglassTests.swift; sourceTree = "<group>"; };
 		E581E37727551A5E00021659 /* MonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTests.swift; sourceTree = "<group>"; };
+		E587EDE0275E465500CA80A1 /* CalendarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		E5677929274132C90040FEF0 /* hourglass */ = {
 			isa = PBXGroup;
 			children = (
+				E587EDDF275E431800CA80A1 /* ViewComponets */,
 				E55900D72759000A004EC249 /* lib */,
 				E567792A274132C90040FEF0 /* hourglassApp.swift */,
 				E567792C274132C90040FEF0 /* ContentView.swift */,
@@ -116,7 +119,7 @@
 				E522BCED274D1E0A00EC2EB3 /* SettingView.swift */,
 				E522BCEF274E733300EC2EB3 /* DateView.swift */,
 				E522BCF1274E744B00EC2EB3 /* CalendarView.swift */,
-				E522BCF3274E7B3A00EC2EB3 /* DayView.swift */,
+				E587EDE0275E465500CA80A1 /* CalendarVM.swift */,
 			);
 			path = hourglass;
 			sourceTree = "<group>";
@@ -136,6 +139,14 @@
 				E581E37727551A5E00021659 /* MonthTests.swift */,
 			);
 			path = hourglassTests;
+			sourceTree = "<group>";
+		};
+		E587EDDF275E431800CA80A1 /* ViewComponets */ = {
+			isa = PBXGroup;
+			children = (
+				E522BCF3274E7B3A00EC2EB3 /* DayView.swift */,
+			);
+			path = ViewComponets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				E5677934274132CD0040FEF0 /* Persistence.swift in Sources */,
 				E567792D274132C90040FEF0 /* ContentView.swift in Sources */,
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
+				E587EDE1275E465500CA80A1 /* CalendarVM.swift in Sources */,
 				E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */,
 				E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */,
 				E581E3692755121300021659 /* Month.swift in Sources */,

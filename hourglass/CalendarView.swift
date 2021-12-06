@@ -13,15 +13,7 @@ struct CalendarView: View {
     var weeks = ["日","一","二","三","四","五","六"]
     var columns : [GridItem] = Array(repeating: .init(.flexible()), count: 7)
 
-    @State var currentDay: Int
-    
-    
-    
-    init() {
-        let dc = Calendar.current.dateComponents(in: TimeZone.current, from: Date())
-        self.currentDay = dc.day ?? 1
-        //print("?????????init \( dc.day)")
-    }
+    @EnvironmentObject var calendarVM: CalendarVM
     
     var days: [Int]  {
         
@@ -36,11 +28,12 @@ struct CalendarView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            HStack(alignment: .center) {
                 Button {
                     print("年月日")
+                    print("?????\(calendarVM.day)")
                 } label: {
-                    Text("2021年11月28日\(currentDay)")
+                    Text("2021年11月28日")
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                         .foregroundColor(Color("DayColor"))
@@ -51,12 +44,15 @@ struct CalendarView: View {
                 HStack {
                     Button {
                         print("Prev")
+                        calendarVM.month -= 1
+                        
                     } label: {
                         Image("PrevArrow")
                     }
                     .padding(.horizontal)
                     Button {
                         print("Next")
+                        calendarVM.month += 1
                     } label: {
                         Image("NextArrow")
                     }
@@ -80,7 +76,8 @@ struct CalendarView: View {
             
             LazyVGrid(columns: columns,spacing: 5) {
                 ForEach(days.indices, id: \.self) { i in
-                    DayView(dayIndex: days[i],isCurrent: .constant(currentDay == days[i]),currentVal: $currentDay)
+                    DayView(dayIndex: days[i],isCurrent: .constant(days[i] == calendarVM.day), currentVal: .constant(calendarVM.day))
+                        .environmentObject(calendarVM)
                 }
             }
             
@@ -93,9 +90,11 @@ struct CalendarView_Previews: PreviewProvider {
         Group {
             CalendarView()
                 .previewLayout(.fixed(width: 475, height: 320.0))
+                .environmentObject(CalendarVM.init())
             CalendarView()
                 .preferredColorScheme(.dark)
                 .previewLayout(.fixed(width: 475, height: 320.0))
+                .environmentObject(CalendarVM.init())
         }
     }
 }

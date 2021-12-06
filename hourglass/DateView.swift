@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct DateView: View {
+    
+    @StateObject var calenderVM: CalendarVM = CalendarVM()
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                CalendarView().padding(.top).listRowSeparator(.hidden)
+                VStack {
+                    CalendarView()
+                        .padding(.top)
+                        .listRowSeparator(.hidden)
+                        .onAppear {
+                            print("calenderVM.day->\(calenderVM.day)")
+                        }.environmentObject(calenderVM)
+                }
             }
             
             .listStyle(.plain)

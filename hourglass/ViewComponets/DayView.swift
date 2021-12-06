@@ -13,14 +13,16 @@ struct DayView: View {
     @Binding var isCurrent:Bool
     @Binding var currentVal: Int
     
+    @EnvironmentObject var calendarVM: CalendarVM
+
+    
     private let size = 36.0
     
     var body: some View {
         VStack {
             ZStack {
                 Button {
-                    print("\(dayIndex)")
-                    self.$currentVal.wrappedValue = dayIndex
+                    calendarVM.day = dayIndex
                 } label: {
                     if isCurrent {
                         Text(dayIndex == 0 ? " " : "\(dayIndex)")
