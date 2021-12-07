@@ -15,17 +15,6 @@ struct CalendarView: View {
 
     @EnvironmentObject var calendarVM: CalendarVM
     
-    var days: [Int]  {
-        
-        let calendar = Calendar.current
-        
-        let dc = calendar.dateComponents([.year,.month,.day], from: Date())
-        
-        var month = Month.init(dateComponents: dc)
-        
-        return month.toDays()
-    }
-    
     var body: some View {
         VStack {
             HStack(alignment: .center) {
@@ -33,7 +22,7 @@ struct CalendarView: View {
                     print("年月日")
                     print("?????\(calendarVM.day)")
                 } label: {
-                    Text("2021年11月28日")
+                    Text("\(calendarVM.toDate())")
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                         .foregroundColor(Color("DayColor"))
@@ -44,7 +33,7 @@ struct CalendarView: View {
                 HStack {
                     Button {
                         print("Prev")
-                        calendarVM.month -= 1
+                        calendarVM.subMonth(1)
                         
                     } label: {
                         Image("PrevArrow")
@@ -52,7 +41,7 @@ struct CalendarView: View {
                     .padding(.horizontal)
                     Button {
                         print("Next")
-                        calendarVM.month += 1
+                        calendarVM.addMonth(1)
                     } label: {
                         Image("NextArrow")
                     }
@@ -74,9 +63,9 @@ struct CalendarView: View {
                 }
             }
             
-            LazyVGrid(columns: columns,spacing: 5) {
-                ForEach(days.indices, id: \.self) { i in
-                    DayView(dayIndex: days[i],isCurrent: .constant(days[i] == calendarVM.day), currentVal: .constant(calendarVM.day))
+            LazyVGrid(columns: columns,spacing: 6) {
+                ForEach(calendarVM.days(), id: \.self) { i in
+                    DayView(dayIndex: i,isCurrent: .constant(i == calendarVM.day), currentVal: .constant(calendarVM.day))
                         .environmentObject(calendarVM)
                 }
             }

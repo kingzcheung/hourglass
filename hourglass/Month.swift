@@ -18,6 +18,7 @@ struct Month {
         
         // 给定的日期中，1号是周几？
         let firstDayIdx = self.getMonthFirstDayIndex()
+        print(firstDayIdx)
         // 获取当前月份有多少天
         let monthCount = Month.getCurentMonthDays(dateComponents: self.dateComponents)
         
@@ -28,7 +29,7 @@ struct Month {
         for i in 1 ..< monthCount {
             days += [i]
         }
-                
+        print(days)
         return days
     }
     
