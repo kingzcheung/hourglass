@@ -7,13 +7,32 @@
 
 import SwiftUI
 
+
+enum Flavor: String, CaseIterable, Identifiable {
+    case chocolate
+    case vanilla
+    case strawberry
+
+    var id: String { self.rawValue }
+}
+
 struct CalendarView: View {
     
 //    var weeks = ["Su","Mo","Tu","We","Th","Fr","Sa"]
     var weeks = ["日","一","二","三","四","五","六"]
     var columns : [GridItem] = Array(repeating: .init(.flexible()), count: 7)
-
+    @State var isPresented = false
+    @State private var selectedFlavor = Flavor.chocolate
     @EnvironmentObject var calendarVM: CalendarVM
+    @State private var date = Date()
+    let dateRange: ClosedRange<Date> = {
+        let calendar = Calendar.current
+        let startComponents = DateComponents(year: 2021, month: 1, day: 1)
+        let endComponents = DateComponents(year: 2021, month: 12, day: 31, hour: 23, minute: 59, second: 59)
+        return calendar.date(from:startComponents)!
+            ...
+            calendar.date(from:endComponents)!
+    }()
     
     var body: some View {
         VStack {
@@ -21,14 +40,25 @@ struct CalendarView: View {
                 Button {
                     print("年月日")
                     print("?????\(calendarVM.day)")
+                    self.isPresented = !self.isPresented
                 } label: {
                     Text("\(calendarVM.toDate())")
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                         .foregroundColor(Color("DayColor"))
                         
-                }
+                }.popover(isPresented: $isPresented,  arrowEdge: .leading) {
 
+                    DatePicker(
+                            "Start Date",
+                             selection: $date,
+                             in: dateRange,
+                             displayedComponents: [.date]
+                        )
+                    
+                }
+                
+                
                 Spacer()
                 HStack {
                     Button {
