@@ -59,4 +59,50 @@ struct Month {
         let range = calendar.range(of: Calendar.Component.day, in: Calendar.Component.month, for: date)
         return range!.count
     }
+    
+    static func solarToLunar(year: Int, month: Int, day: Int) -> String {
+
+        //初始化公历日历
+
+        let solarCalendar = Calendar.init(identifier: .gregorian)
+
+        var components = DateComponents()
+
+        components.year = year
+
+        components.month = month
+
+        components.day = day
+
+        components.hour = 12
+
+        components.minute = 0
+
+        components.second = 0
+
+        components.timeZone = TimeZone.init(secondsFromGMT: 60 * 60 * 8)
+
+        let solarDate = solarCalendar.date(from: components)
+
+         
+
+        //初始化农历日历
+
+        let lunarCalendar = Calendar.init(identifier: .chinese)
+
+        //日期格式和输出
+
+        let formatter = DateFormatter()
+
+        formatter.locale = Locale(identifier: "zh_CN")
+
+        formatter.dateStyle = .short
+        
+//        formatter.dateStyle = 
+
+        formatter.calendar = lunarCalendar
+
+        return formatter.string(from: solarDate!)
+
+    }
 }

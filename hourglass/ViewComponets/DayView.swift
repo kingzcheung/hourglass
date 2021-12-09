@@ -25,22 +25,30 @@ struct DayView: View {
                     calendarVM.day = dayIndex
                 } label: {
                     if isCurrent {
-                        Text(dayIndex == 0 ? " " : "\(dayIndex)")
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                            .frame(minWidth: size, idealWidth: size, maxWidth: size, minHeight: size, idealHeight: size, maxHeight: size, alignment: .center)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(size / 2)
-                            .font(.callout)
+                        VStack {
+                            Text(dayIndex == 0 ? " " : "\(dayIndex)")
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                
+                            Text(Month.solarToLunar(year: calendarVM.year, month: calendarVM.month, day: calendarVM.day).suffix(2))
+                                .font(.body)
+                        }
+                        .frame(minWidth: size, idealWidth: size, maxWidth: size, minHeight: size, idealHeight: size, maxHeight: size, alignment: .center)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(size / 2)
+                        .font(.callout)
                         
                     }else {
-                    Text(dayIndex == 0 ? " " : "\(dayIndex)")
-                        .multilineTextAlignment(.center)
-                        .frame(width: size, height: size, alignment: .center)
-                        .foregroundColor(Color("DayColor"))
-                        .font(.callout)
-                    }
+                        VStack {
+                            Text(dayIndex == 0 ? " " : "\(dayIndex)")
+                                .multilineTextAlignment(.center)
+                            Text(Month.solarToLunar(year: calendarVM.year, month: calendarVM.month, day: calendarVM.day))
+                        
+                    }.frame(width: size, height: size, alignment: .center)
+                            .foregroundColor(Color("DayColor"))
+                            .font(.callout)
+                            }
                 }
 
                 
