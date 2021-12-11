@@ -30,8 +30,8 @@ struct DayView: View {
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
                                 
-                            Text(Month.solarToLunar(year: calendarVM.year, month: calendarVM.month, day: calendarVM.day).suffix(2))
-                                .font(.body)
+//                            Text(Month.solarToLunar(year: calendarVM.year, month: calendarVM.month, day: calendarVM.day).suffix(2))
+//                                .font(.body)
                         }
                         .frame(minWidth: size, idealWidth: size, maxWidth: size, minHeight: size, idealHeight: size, maxHeight: size, alignment: .center)
                         .background(.blue)
@@ -43,7 +43,7 @@ struct DayView: View {
                         VStack {
                             Text(dayIndex == 0 ? " " : "\(dayIndex)")
                                 .multilineTextAlignment(.center)
-                            Text(Month.solarToLunar(year: calendarVM.year, month: calendarVM.month, day: calendarVM.day))
+//                            Text(Month.solarToLunar(year: calendarVM.year, month: calendarVM.month, day: calendarVM.day))
                         
                     }.frame(width: size, height: size, alignment: .center)
                             .foregroundColor(Color("DayColor"))

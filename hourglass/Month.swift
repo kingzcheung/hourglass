@@ -29,7 +29,6 @@ struct Month {
         for i in 1 ..< monthCount {
             days += [i]
         }
-        print(days)
         return days
     }
     
@@ -58,6 +57,10 @@ struct Month {
         let date = calendar.date(from: dc) ?? Date()
         let range = calendar.range(of: Calendar.Component.day, in: Calendar.Component.month, for: date)
         return range!.count
+    }
+    
+    func toLunarDays(days: [Int])->[Int] {
+        return []
     }
     
     static func solarToLunar(year: Int, month: Int, day: Int) -> String {
