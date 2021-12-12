@@ -24,6 +24,8 @@
 		E581E37127551A1600021659 /* hourglassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E37027551A1600021659 /* hourglassTests.swift */; };
 		E581E37827551A5E00021659 /* MonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E581E37727551A5E00021659 /* MonthTests.swift */; };
 		E587EDE1275E465500CA80A1 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE0275E465500CA80A1 /* CalendarVM.swift */; };
+		E587EDE327662E9D00CA80A1 /* UnVipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE227662E9D00CA80A1 /* UnVipView.swift */; };
+		E587EDE52766317C00CA80A1 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE42766317C00CA80A1 /* PurchaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		E581E37027551A1600021659 /* hourglassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hourglassTests.swift; sourceTree = "<group>"; };
 		E581E37727551A5E00021659 /* MonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTests.swift; sourceTree = "<group>"; };
 		E587EDE0275E465500CA80A1 /* CalendarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVM.swift; sourceTree = "<group>"; };
+		E587EDE227662E9D00CA80A1 /* UnVipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnVipView.swift; sourceTree = "<group>"; };
+		E587EDE42766317C00CA80A1 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				E522BCF3274E7B3A00EC2EB3 /* DayView.swift */,
+				E587EDE227662E9D00CA80A1 /* UnVipView.swift */,
+				E587EDE42766317C00CA80A1 /* PurchaseView.swift */,
 			);
 			path = ViewComponets;
 			sourceTree = "<group>";
@@ -250,7 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E522BCF2274E744B00EC2EB3 /* CalendarView.swift in Sources */,
+				E587EDE327662E9D00CA80A1 /* UnVipView.swift in Sources */,
 				E522BCF4274E7B3A00EC2EB3 /* DayView.swift in Sources */,
+				E587EDE52766317C00CA80A1 /* PurchaseView.swift in Sources */,
 				E5677934274132CD0040FEF0 /* Persistence.swift in Sources */,
 				E567792D274132C90040FEF0 /* ContentView.swift in Sources */,
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
