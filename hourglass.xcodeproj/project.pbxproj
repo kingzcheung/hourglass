@@ -26,6 +26,7 @@
 		E587EDE1275E465500CA80A1 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE0275E465500CA80A1 /* CalendarVM.swift */; };
 		E587EDE327662E9D00CA80A1 /* UnVipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE227662E9D00CA80A1 /* UnVipView.swift */; };
 		E587EDE52766317C00CA80A1 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE42766317C00CA80A1 /* PurchaseView.swift */; };
+		E587EDE7276789AC00CA80A1 /* SettingLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587EDE6276789AC00CA80A1 /* SettingLinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E587EDE0275E465500CA80A1 /* CalendarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVM.swift; sourceTree = "<group>"; };
 		E587EDE227662E9D00CA80A1 /* UnVipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnVipView.swift; sourceTree = "<group>"; };
 		E587EDE42766317C00CA80A1 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		E587EDE6276789AC00CA80A1 /* SettingLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E522BCF3274E7B3A00EC2EB3 /* DayView.swift */,
 				E587EDE227662E9D00CA80A1 /* UnVipView.swift */,
 				E587EDE42766317C00CA80A1 /* PurchaseView.swift */,
+				E587EDE6276789AC00CA80A1 /* SettingLinkView.swift */,
 			);
 			path = ViewComponets;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				E5677934274132CD0040FEF0 /* Persistence.swift in Sources */,
 				E567792D274132C90040FEF0 /* ContentView.swift in Sources */,
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
+				E587EDE7276789AC00CA80A1 /* SettingLinkView.swift in Sources */,
 				E587EDE1275E465500CA80A1 /* CalendarVM.swift in Sources */,
 				E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */,
 				E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */,
