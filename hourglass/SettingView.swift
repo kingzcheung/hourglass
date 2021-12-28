@@ -46,14 +46,14 @@ struct SettingView: View {
                     Text("小组件").font(.callout)
                 }.listRowSeparator(.hidden)
                 Section {
-                    Text("联系我们")
-                    Text("鼓励我们")
-                    Text("分享给朋友")
+                    SettingLinkView(iconName: "contact", titleLabel: "联系我们")
+                    SettingLinkView(iconName: "likeus", titleLabel: "鼓励我们")
+                    SettingLinkView(iconName: "share", titleLabel: "分享给朋友")
                 } header: {
                     Text("支持我们").font(.callout)
                 }.listRowSeparator(.hidden)
                 Section {
-                    Text("关于应用")
+                    SettingLinkView(iconName: "about", titleLabel: "关于应用")
                 } header: {
                     Text("关于").font(.callout)
                 }
