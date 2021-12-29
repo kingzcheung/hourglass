@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5205616277CA27200280D41 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5205615277CA27200280D41 /* WidgetKit.framework */; };
+		E5205618277CA27200280D41 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5205617277CA27200280D41 /* SwiftUI.framework */; };
+		E520561B277CA27200280D41 /* New_Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = E520561A277CA27200280D41 /* New_Year.swift */; };
+		E520561E277CA27500280D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E520561D277CA27500280D41 /* Assets.xcassets */; };
+		E5205620277CA27500280D41 /* New_Year.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E520561C277CA27200280D41 /* New_Year.intentdefinition */; };
+		E5205621277CA27500280D41 /* New_Year.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E520561C277CA27200280D41 /* New_Year.intentdefinition */; };
+		E5205624277CA27500280D41 /* New YearExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E5205613277CA27200280D41 /* New YearExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522BCEB274D1BD000EC2EB3 /* HourglassView.swift */; };
 		E522BCEE274D1E0A00EC2EB3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522BCED274D1E0A00EC2EB3 /* SettingView.swift */; };
 		E522BCF0274E733400EC2EB3 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522BCEF274E733300EC2EB3 /* DateView.swift */; };
@@ -30,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E5205622277CA27500280D41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E567791F274132C90040FEF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5205612277CA27200280D41;
+			remoteInfo = "New YearExtension";
+		};
 		E581E37227551A1600021659 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E567791F274132C90040FEF0 /* Project object */;
@@ -39,7 +53,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E5205625277CA27500280D41 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E5205624277CA27500280D41 /* New YearExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E5205613277CA27200280D41 /* New YearExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "New YearExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5205615277CA27200280D41 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E5205617277CA27200280D41 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E520561A277CA27200280D41 /* New_Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Year.swift; sourceTree = "<group>"; };
+		E520561C277CA27200280D41 /* New_Year.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = New_Year.intentdefinition; sourceTree = "<group>"; };
+		E520561D277CA27500280D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E520561F277CA27500280D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E522BCEB274D1BD000EC2EB3 /* HourglassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourglassView.swift; sourceTree = "<group>"; };
 		E522BCED274D1E0A00EC2EB3 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E522BCEF274E733300EC2EB3 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
@@ -65,6 +100,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E5205610277CA27200280D41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5205618277CA27200280D41 /* SwiftUI.framework in Frameworks */,
+				E5205616277CA27200280D41 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5677924274132C90040FEF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +126,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5205614277CA27200280D41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5205615277CA27200280D41 /* WidgetKit.framework */,
+				E5205617277CA27200280D41 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5205619277CA27200280D41 /* New Year */ = {
+			isa = PBXGroup;
+			children = (
+				E520561A277CA27200280D41 /* New_Year.swift */,
+				E520561C277CA27200280D41 /* New_Year.intentdefinition */,
+				E520561D277CA27500280D41 /* Assets.xcassets */,
+				E520561F277CA27500280D41 /* Info.plist */,
+			);
+			path = "New Year";
+			sourceTree = "<group>";
+		};
 		E55900D72759000A004EC249 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +159,8 @@
 			children = (
 				E5677929274132C90040FEF0 /* hourglass */,
 				E581E36F27551A1600021659 /* hourglassTests */,
+				E5205619277CA27200280D41 /* New Year */,
+				E5205614277CA27200280D41 /* Frameworks */,
 				E5677928274132C90040FEF0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +170,7 @@
 			children = (
 				E5677927274132C90040FEF0 /* hourglass.app */,
 				E581E36E27551A1600021659 /* hourglassTests.xctest */,
+				E5205613277CA27200280D41 /* New YearExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +228,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E5205612277CA27200280D41 /* New YearExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5205628277CA27500280D41 /* Build configuration list for PBXNativeTarget "New YearExtension" */;
+			buildPhases = (
+				E520560F277CA27200280D41 /* Sources */,
+				E5205610277CA27200280D41 /* Frameworks */,
+				E5205611277CA27200280D41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "New YearExtension";
+			productName = "New YearExtension";
+			productReference = E5205613277CA27200280D41 /* New YearExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E5677926274132C90040FEF0 /* hourglass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E567793A274132CD0040FEF0 /* Build configuration list for PBXNativeTarget "hourglass" */;
@@ -168,10 +252,12 @@
 				E5677923274132C90040FEF0 /* Sources */,
 				E5677924274132C90040FEF0 /* Frameworks */,
 				E5677925274132C90040FEF0 /* Resources */,
+				E5205625277CA27500280D41 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5205623277CA27500280D41 /* PBXTargetDependency */,
 			);
 			name = hourglass;
 			productName = hourglass;
@@ -203,9 +289,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					E5205612277CA27200280D41 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					E5677926274132C90040FEF0 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -230,11 +319,20 @@
 			targets = (
 				E5677926274132C90040FEF0 /* hourglass */,
 				E581E36D27551A1600021659 /* hourglassTests */,
+				E5205612277CA27200280D41 /* New YearExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E5205611277CA27200280D41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E520561E277CA27500280D41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5677925274132C90040FEF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +352,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E520560F277CA27200280D41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5205620277CA27500280D41 /* New_Year.intentdefinition in Sources */,
+				E520561B277CA27200280D41 /* New_Year.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5677923274132C90040FEF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +373,7 @@
 				E567792D274132C90040FEF0 /* ContentView.swift in Sources */,
 				E5677937274132CD0040FEF0 /* hourglass.xcdatamodeld in Sources */,
 				E587EDE7276789AC00CA80A1 /* SettingLinkView.swift in Sources */,
+				E5205621277CA27500280D41 /* New_Year.intentdefinition in Sources */,
 				E587EDE1275E465500CA80A1 /* CalendarVM.swift in Sources */,
 				E5677940274150280040FEF0 /* TaskTypeView.swift in Sources */,
 				E522BCEC274D1BD200EC2EB3 /* HourglassView.swift in Sources */,
@@ -289,6 +397,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E5205623277CA27500280D41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5205612277CA27200280D41 /* New YearExtension */;
+			targetProxy = E5205622277CA27500280D41 /* PBXContainerItemProxy */;
+		};
 		E581E37327551A1600021659 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E5677926274132C90040FEF0 /* hourglass */;
@@ -297,6 +410,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		E5205626277CA27500280D41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = US33857E6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "New Year/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "New Year";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kingzcheung.hourglass.New-Year";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5205627277CA27500280D41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = US33857E6U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "New Year/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "New Year";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kingzcheung.hourglass.New-Year";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E5677938274132CD0040FEF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -416,6 +585,7 @@
 		E567793B274132CD0040FEF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,6 +615,7 @@
 		E567793C274132CD0040FEF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +691,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E5205628277CA27500280D41 /* Build configuration list for PBXNativeTarget "New YearExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5205626277CA27500280D41 /* Debug */,
+				E5205627277CA27500280D41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E5677922274132C90040FEF0 /* Build configuration list for PBXProject "hourglass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
