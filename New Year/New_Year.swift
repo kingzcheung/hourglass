@@ -44,16 +44,29 @@ struct New_YearEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("距离2022年还有")
-                .font(.caption)
-                .foregroundColor(Color.gray)
-                .multilineTextAlignment(.leading)
-                .lineLimit(1)
+        VStack(alignment: .leading) {
+            HStack {
+                Text("距离2022年还有")
+                    .font(.caption)
+                    .foregroundColor(Color.gray)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(1)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                Spacer()
+                    
+            }
+            
+            
                 
-            Text("5")
-                .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
-                .multilineTextAlignment(.center)
+            HStack(alignment: .center) {
+                Spacer()
+                Text("5")
+                    .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(.center)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                Spacer()
+            }
+            
         }
     }
 }
