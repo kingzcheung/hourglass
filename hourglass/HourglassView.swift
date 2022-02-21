@@ -39,7 +39,7 @@ struct HourglassView: View {
                     }
                     .onDelete(perform: deleteItems)
                     .listRowSeparator(.hidden)
-                    .listRowBackground(Color("bg_color",bundle: nil))
+                    //.listRowBackground(Color("bg_color",bundle: nil))
             
             }
             
@@ -56,7 +56,8 @@ struct HourglassView: View {
                 }
             }
             .listStyle(.plain)
-            .background(Color("bg_color",bundle: nil).edgesIgnoringSafeArea(.all))
+            //.background(Color("bg_color",bundle: nil)
+            //.edgesIgnoringSafeArea(.all))
             // bug??
             .navigationBarTitle(Text("Hourglass"))
             .navigationBarTitleDisplayMode(.large)

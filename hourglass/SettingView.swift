@@ -14,13 +14,13 @@ struct SettingView: View {
     var body: some View {
         NavigationView {
             List {
-                Section{
-                    UnVipView(isPr: $isPresented)
-                        .sheet(isPresented: $isPresented, onDismiss: nil) {
-                        PurchaseView()
-                    }
-                    
-                }
+//                Section{
+//                    UnVipView(isPr: $isPresented)
+//                        .sheet(isPresented: $isPresented, onDismiss: nil) {
+//                        PurchaseView()
+//                    }
+//
+//                }
                 Section {
                     NavigationLink {
                         EmptyView()
@@ -58,7 +58,7 @@ struct SettingView: View {
                     Text("关于").font(.callout)
                 }
 
-            }.listStyle(.automatic)
+            }.listStyle(.automatic).navigationBarTitle(Text("设置"))
         }
         
     }
